@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cc23548oy2dlm"]
 
 [ext_resource type="Texture2D" uid="uid://ddxoy11ss6l5r" path="res://assets/textures/star_background.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://cvhty6unj6v6s" path="res://scenes/player.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D" unique_id=350288215]
 
@@ -11,3 +12,12 @@ texture = ExtResource("1_uwrxv")
 region_enabled = true
 region_rect = Rect2(0, 0, 10000, 10000)
 metadata/_edit_lock_ = true
+
+[node name="Player" parent="Stars" unique_id=336276440 instance=ExtResource("2_yqjtg")]
+position = Vector2(-117, 0)
+
+[node name="Player2" parent="Stars" unique_id=665465398 instance=ExtResource("2_yqjtg")]
+position = Vector2(94, 9)
+
+[node name="Player3" parent="Stars" unique_id=1526443248 instance=ExtResource("2_yqjtg")]
+position = Vector2(297, 2)
