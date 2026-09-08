@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cgmjml6n8fiic"]
 
+[ext_resource type="Script" uid="uid://cormhay8haxwh" path="res://scripts/asteroid.gd" id="1_6mo6b"]
 [ext_resource type="Texture2D" uid="uid://nsmm0tpj7p2c" path="res://assets/textures/asteroid_grey.png" id="1_akfqu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pmnhf"]
@@ -8,6 +9,7 @@ radius = 45.0
 [node name="Asteroid" type="RigidBody2D" unique_id=501276675]
 z_index = 50
 gravity_scale = 0.0
+script = ExtResource("1_6mo6b")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1739920513]
 texture = ExtResource("1_akfqu")

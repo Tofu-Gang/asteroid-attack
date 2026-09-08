@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cvhty6unj6v6s"]
 
 [ext_resource type="Texture2D" uid="uid://c1ogfdb1ouesk" path="res://assets/textures/green_ship.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://dxo4lurlij5fc" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pmnhf"]
 radius = 34.0
@@ -9,6 +10,7 @@ height = 124.0
 [node name="Player" type="RigidBody2D" unique_id=336276440]
 z_index = 100
 gravity_scale = 0.0
+script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=663539879]
 texture = ExtResource("1_3vyb7")
