@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cgmjml6n8fiic"]
+
+[ext_resource type="Texture2D" uid="uid://nsmm0tpj7p2c" path="res://assets/textures/asteroid_grey.png" id="1_akfqu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pmnhf"]
+radius = 45.0
+
+[node name="Asteroid" type="RigidBody2D" unique_id=501276675]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1739920513]
+texture = ExtResource("1_akfqu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1145908852]
+shape = SubResource("CircleShape2D_pmnhf")
