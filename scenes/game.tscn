@@ -17,11 +17,13 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." unique_id=336276440 instance=ExtResource("2_yqjtg")]
 position = Vector2(625, 377)
 
-[node name="Asteroid" parent="." unique_id=501276675 instance=ExtResource("3_lnu2h")]
+[node name="Asteroids" type="Node2D" parent="." unique_id=1468732009]
+
+[node name="Asteroid" parent="Asteroids" unique_id=501276675 instance=ExtResource("3_lnu2h")]
 position = Vector2(356, 269)
 
-[node name="Asteroid2" parent="." unique_id=639322660 instance=ExtResource("3_lnu2h")]
+[node name="Asteroid2" parent="Asteroids" unique_id=639322660 instance=ExtResource("3_lnu2h")]
 position = Vector2(459, 549)
 
-[node name="Asteroid3" parent="." unique_id=620460720 instance=ExtResource("3_lnu2h")]
+[node name="Asteroid3" parent="Asteroids" unique_id=620460720 instance=ExtResource("3_lnu2h")]
 position = Vector2(855, 260)
