@@ -17,3 +17,5 @@ func _ready() -> void:
 	var operand_1: int = -8
 	var operand_2: int = -10
 	print("result: ", operand_1 * operand_2)
+	print(2.0 * 3.0 / 4.0)
+	print(2.0 / 4.0 * 3.0)
