@@ -12,3 +12,8 @@ func _ready() -> void:
 	print("How about now? ", is_daytime)
 	var name: String = "Tofu-Gang"
 	print("Who are you? ", name)
+	var my_int: int = 10 + 5
+	print("my_int = ", my_int)
+	var operand_1: int = -8
+	var operand_2: int = -10
+	print("result: ", operand_1 * operand_2)
