@@ -2,8 +2,5 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	var my_vector: Vector2 = Vector2(-100.0, -50.0)
+	apply_impulse(my_vector)
