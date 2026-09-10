@@ -4,3 +4,7 @@ extends RigidBody2D
 func _ready() -> void:
 	var my_vector: Vector2 = Vector2(-100.0, -50.0)
 	apply_impulse(my_vector)
+	my_function()
+
+func my_function() -> void:
+	print("Here's your message!")
