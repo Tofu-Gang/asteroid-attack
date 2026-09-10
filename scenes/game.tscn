@@ -15,9 +15,21 @@ region_rect = Rect2(0, 0, 10000, 10000)
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=336276440 instance=ExtResource("2_yqjtg")]
-position = Vector2(366, 195)
+position = Vector2(304, 331)
 
 [node name="Asteroids" type="Node2D" parent="." unique_id=1468732009]
 
-[node name="Asteroid" parent="Asteroids" unique_id=501276675 instance=ExtResource("3_lnu2h")]
+[node name="Asteroid1" parent="Asteroids" unique_id=501276675 instance=ExtResource("3_lnu2h")]
 position = Vector2(652, 378)
+
+[node name="Asteroid2" parent="Asteroids" unique_id=230669420 instance=ExtResource("3_lnu2h")]
+position = Vector2(539, 127)
+
+[node name="Asteroid3" parent="Asteroids" unique_id=1338319440 instance=ExtResource("3_lnu2h")]
+position = Vector2(938, 259)
+
+[node name="Asteroid4" parent="Asteroids" unique_id=376537019 instance=ExtResource("3_lnu2h")]
+position = Vector2(925, 598)
+
+[node name="Asteroid5" parent="Asteroids" unique_id=1717559947 instance=ExtResource("3_lnu2h")]
+position = Vector2(272, 575)

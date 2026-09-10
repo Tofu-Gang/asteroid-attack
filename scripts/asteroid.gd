@@ -2,15 +2,16 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var my_vector: Vector2 = Vector2(-100.0, -50.0)
-	apply_impulse(my_vector)
-	var result: bool = my_function("Hello, world!")
-	print("result: ", result)
-	print("Subtraction: ", subtract(10.0, 5.0))
+	const FORCE_RANGE: float = 200
+	apply_random_impulse(FORCE_RANGE)
+	
+func apply_random_impulse(range: float) -> void:
+	apply_impulse(get_random_force_vector(range))
 
-func my_function(message: String) -> bool:
-	print("Here's your message! ", message)
-	return true
+func get_random_force_vector(range: float) -> Vector2:
+	var x: float = get_random_force(range)
+	var y: float = get_random_force(range)
+	return Vector2(x, y)
 
-func subtract(operand_1: float, operand_2: float) -> float:
-	return operand_1 - operand_2
+func get_random_force(range: float) -> float:
+	return randf_range(-range, range)
