@@ -2,7 +2,11 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	var message: String = "Goodbye"
+	if message == "Hello":
+		print("TRUE")
+	else:
+		print("FALSE")
 
 func _process(_delta: float) -> void:
 	pass
