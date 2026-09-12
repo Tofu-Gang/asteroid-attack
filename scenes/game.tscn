@@ -14,22 +14,33 @@ region_enabled = true
 region_rect = Rect2(0, 0, 10000, 10000)
 metadata/_edit_lock_ = true
 
+[node name="MapBounds" type="StaticBody2D" parent="." unique_id=1812246330]
+
+[node name="Polygon2D" type="Polygon2D" parent="MapBounds" unique_id=408818820]
+color = Color(0, 0, 0, 0.5019608)
+polygon = PackedVector2Array(-0.30151343, -1505.1302, 396.6985, -1447.1302, 754.6985, -1300.1302, 1053.6985, -1066.1302, 1310.6985, -748.13025, 1452.6985, -390.13025, 1508.6985, -13.130245, 1457.6985, 381.86975, 1310.6985, 735.86975, 1066.6985, 1066.8698, 754.6985, 1304.8698, 386.6985, 1452.8698, 5.6984863, 1507.8698, -389.3015, 1465.8698, -757.3015, 1304.8698, -1065.3015, 1070.8698, -1308.3015, 762.86975, -1455.3015, 390.86975, -1515.3015, 9.869755, -1460.3015, -376.13025, -1304.3015, -758.13025, -1051.3015, -1075.1302, -766.3015, -1304.1302, -398.3015, -1456.1302, -0.30151343, -1505.1302, 156.69849, -4602.1304, -4312.3013, -4597.1304, -4319.3013, 5331.8696, 5608.6987, 5327.8696, 5588.6987, -4597.1304, 170.69849, -4597.1304)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapBounds" unique_id=133451940]
+visible = false
+position = Vector2(3.3015134, 1.1302454)
+polygon = PackedVector2Array(-0.30151343, -1505.1302, 396.6985, -1447.1302, 754.6985, -1300.1302, 1053.6985, -1066.1302, 1310.6985, -748.13025, 1452.6985, -390.13025, 1508.6985, -13.130245, 1457.6985, 381.86975, 1310.6985, 735.86975, 1066.6985, 1066.8698, 754.6985, 1304.8698, 386.6985, 1452.8698, 5.6984863, 1507.8698, -389.3015, 1465.8698, -757.3015, 1304.8698, -1065.3015, 1070.8698, -1308.3015, 762.86975, -1455.3015, 390.86975, -1515.3015, 9.869755, -1460.3015, -376.13025, -1304.3015, -758.13025, -1051.3015, -1075.1302, -766.3015, -1304.1302, -398.3015, -1456.1302, -0.30151343, -1505.1302, 156.69849, -4602.1304, -4312.3013, -4597.1304, -4319.3013, 5331.8696, 5608.6987, 5327.8696, 5588.6987, -4597.1304, 170.69849, -4597.1304)
+
 [node name="Player" parent="." unique_id=336276440 instance=ExtResource("2_yqjtg")]
-position = Vector2(304, 331)
+position = Vector2(8, -5)
 
 [node name="Asteroids" type="Node2D" parent="." unique_id=1468732009]
 
 [node name="Asteroid1" parent="Asteroids" unique_id=501276675 instance=ExtResource("3_lnu2h")]
-position = Vector2(652, 378)
+position = Vector2(181, 317)
 
 [node name="Asteroid2" parent="Asteroids" unique_id=230669420 instance=ExtResource("3_lnu2h")]
-position = Vector2(539, 127)
+position = Vector2(-356, -445)
 
 [node name="Asteroid3" parent="Asteroids" unique_id=1338319440 instance=ExtResource("3_lnu2h")]
-position = Vector2(938, 259)
+position = Vector2(427, -320)
 
 [node name="Asteroid4" parent="Asteroids" unique_id=376537019 instance=ExtResource("3_lnu2h")]
-position = Vector2(925, 598)
+position = Vector2(622, 194)
 
 [node name="Asteroid5" parent="Asteroids" unique_id=1717559947 instance=ExtResource("3_lnu2h")]
-position = Vector2(272, 575)
+position = Vector2(-441, 427)
