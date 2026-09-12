@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cwtm13ws3ca17"]
 
 [ext_resource type="Script" uid="uid://mkqiypo0vowc" path="res://scripts/collection_area.gd" id="1_jfbh3"]
+[ext_resource type="AudioStream" uid="uid://daaj8wls8m1hv" path="res://assets/audio/hurt_sound.wav" id="2_2eubv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pmnhf"]
 radius = 133.06013
@@ -10,6 +11,9 @@ script = ExtResource("1_jfbh3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=510566603]
 shape = SubResource("CircleShape2D_pmnhf")
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="." unique_id=159812142]
+stream = ExtResource("2_2eubv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
