@@ -9,7 +9,7 @@ bounce = 1.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_pmnhf"]
 radius = 45.0
 
-[node name="Asteroid" type="RigidBody2D" unique_id=501276675]
+[node name="Asteroid" type="RigidBody2D" unique_id=501276675 groups=["asteroids"]]
 z_index = 50
 physics_material_override = SubResource("PhysicsMaterial_g2els")
 gravity_scale = 0.0
