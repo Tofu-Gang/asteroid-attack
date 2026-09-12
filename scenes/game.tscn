@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ddxoy11ss6l5r" path="res://assets/textures/star_background.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cvhty6unj6v6s" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cgmjml6n8fiic" path="res://scenes/asteroid.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cwtm13ws3ca17" path="res://scenes/collection_area.tscn" id="4_lbhrr"]
 
 [node name="Game" type="Node2D" unique_id=350288215]
 
@@ -25,8 +26,7 @@ visible = false
 position = Vector2(3.3015134, 1.1302454)
 polygon = PackedVector2Array(-0.30151343, -1505.1302, 396.6985, -1447.1302, 754.6985, -1300.1302, 1053.6985, -1066.1302, 1310.6985, -748.13025, 1452.6985, -390.13025, 1508.6985, -13.130245, 1457.6985, 381.86975, 1310.6985, 735.86975, 1066.6985, 1066.8698, 754.6985, 1304.8698, 386.6985, 1452.8698, 5.6984863, 1507.8698, -389.3015, 1465.8698, -757.3015, 1304.8698, -1065.3015, 1070.8698, -1308.3015, 762.86975, -1455.3015, 390.86975, -1515.3015, 9.869755, -1460.3015, -376.13025, -1304.3015, -758.13025, -1051.3015, -1075.1302, -766.3015, -1304.1302, -398.3015, -1456.1302, -0.30151343, -1505.1302, 156.69849, -4602.1304, -4312.3013, -4597.1304, -4319.3013, 5331.8696, 5608.6987, 5327.8696, 5588.6987, -4597.1304, 170.69849, -4597.1304)
 
-[node name="Player" parent="." unique_id=336276440 instance=ExtResource("2_yqjtg")]
-position = Vector2(8, -5)
+[node name="CollectionArea" parent="." unique_id=880872145 instance=ExtResource("4_lbhrr")]
 
 [node name="Asteroids" type="Node2D" parent="." unique_id=1468732009]
 
@@ -44,3 +44,6 @@ position = Vector2(622, 194)
 
 [node name="Asteroid5" parent="Asteroids" unique_id=1717559947 instance=ExtResource("3_lnu2h")]
 position = Vector2(-441, 427)
+
+[node name="Player" parent="." unique_id=336276440 instance=ExtResource("2_yqjtg")]
+position = Vector2(345, -82)
