@@ -30,6 +30,9 @@ scale_curve = SubResource("CurveTexture_pp7xx")
 color = Color(0.5, 1, 0.5916667, 1)
 alpha_curve = SubResource("CurveTexture_cbl4u")
 
+[sub_resource type="LabelSettings" id="LabelSettings_cbl4u"]
+font_size = 30
+
 [node name="CollectionArea" type="Area2D" unique_id=880872145]
 script = ExtResource("1_jfbh3")
 
@@ -45,6 +48,17 @@ texture = ExtResource("3_cbl4u")
 lifetime = 2.0
 preprocess = 2.0
 process_material = SubResource("ParticleProcessMaterial_2eubv")
+
+[node name="InstructionsText" type="Label" parent="." unique_id=1032733588]
+offset_left = -280.0
+offset_top = -221.0
+offset_right = 282.0
+offset_bottom = -134.0
+text = "Push the asteroids into the green area.
+Collect them all!"
+label_settings = SubResource("LabelSettings_cbl4u")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

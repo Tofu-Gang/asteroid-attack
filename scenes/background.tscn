@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://cqi4lcxe7wjfm"]
+
+[ext_resource type="Texture2D" uid="uid://ddxoy11ss6l5r" path="res://assets/textures/star_background.png" id="1_da6cc"]
+[ext_resource type="Texture2D" uid="uid://byaxgvy8gi3tt" path="res://assets/planets/planet00.png" id="2_b6e46"]
+[ext_resource type="Texture2D" uid="uid://bubpdi0reoa27" path="res://assets/planets/planet01.png" id="3_td6w2"]
+[ext_resource type="Texture2D" uid="uid://cpgd7uq6egb1v" path="res://assets/planets/planet02.png" id="4_r2thq"]
+[ext_resource type="Texture2D" uid="uid://n11pq1j1h0u7" path="res://assets/planets/planet03.png" id="5_0470j"]
+[ext_resource type="Texture2D" uid="uid://h3a74ny00mwi" path="res://assets/planets/planet04.png" id="6_ivgg2"]
+[ext_resource type="Texture2D" uid="uid://e27tnd35x81j" path="res://assets/planets/planet05.png" id="7_r4ipc"]
+[ext_resource type="Texture2D" uid="uid://bima04vmm3avt" path="res://assets/planets/planet06.png" id="8_5xduy"]
+[ext_resource type="Texture2D" uid="uid://ccbsct3c802um" path="res://assets/planets/planet07.png" id="9_fligg"]
+[ext_resource type="Texture2D" uid="uid://bskv7y47x2dm4" path="res://assets/planets/planet08.png" id="10_mhjnw"]
+[ext_resource type="Texture2D" uid="uid://di0oy04lrhp3h" path="res://assets/planets/planet09.png" id="11_0y13x"]
+
+[node name="Background" type="Node2D" unique_id=1396126222]
+
+[node name="Stars" type="Sprite2D" parent="." unique_id=1199851852]
+texture_repeat = 2
+position = Vector2(640, 360)
+texture = ExtResource("1_da6cc")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 10000)
+metadata/_edit_lock_ = true
+
+[node name="Planet00" type="Sprite2D" parent="." unique_id=586664157]
+modulate = Color(1, 1, 1, 0.5254902)
+position = Vector2(-1144, -320)
+texture = ExtResource("2_b6e46")
+
+[node name="Planet01" type="Sprite2D" parent="." unique_id=1059793541]
+modulate = Color(1, 1, 1, 0.5176471)
+position = Vector2(-765.00006, 1396)
+scale = Vector2(2.2171874, 2.2171874)
+texture = ExtResource("3_td6w2")
+
+[node name="Planet02" type="Sprite2D" parent="." unique_id=239079037]
+modulate = Color(1, 1, 1, 0.5647059)
+position = Vector2(-638, 2252)
+texture = ExtResource("4_r2thq")
+
+[node name="Planet03" type="Sprite2D" parent="." unique_id=931889484]
+position = Vector2(2128, 788)
+texture = ExtResource("5_0470j")
+
+[node name="Planet04" type="Sprite2D" parent="." unique_id=1759874584]
+position = Vector2(-1720, -1655.0001)
+scale = Vector2(0.559375, 0.559375)
+texture = ExtResource("6_ivgg2")
+
+[node name="Planet05" type="Sprite2D" parent="." unique_id=1880443029]
+position = Vector2(-1162, -2039)
+texture = ExtResource("7_r4ipc")
+
+[node name="Planet06" type="Sprite2D" parent="." unique_id=1873535476]
+modulate = Color(1, 1, 1, 0.3137255)
+position = Vector2(337.00006, 852.0001)
+scale = Vector2(0.4265625, 0.4265625)
+texture = ExtResource("8_5xduy")
+
+[node name="Planet07" type="Sprite2D" parent="." unique_id=1502344287]
+modulate = Color(1, 1, 1, 0.81960785)
+position = Vector2(-766, -642)
+scale = Vector2(0.384375, 0.36328125)
+texture = ExtResource("9_fligg")
+
+[node name="Planet08" type="Sprite2D" parent="." unique_id=186893800]
+modulate = Color(1, 1, 1, 0.36862746)
+position = Vector2(1796.0002, -1835)
+scale = Vector2(3.2875, 3.2875)
+texture = ExtResource("10_mhjnw")
+
+[node name="Planet09" type="Sprite2D" parent="." unique_id=585791860]
+modulate = Color(1, 1, 1, 0.34509805)
+position = Vector2(-140.99988, -244.99976)
+scale = Vector2(0.6640625, 0.6640625)
+texture = ExtResource("11_0y13x")

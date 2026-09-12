@@ -1,49 +1,119 @@
 [gd_scene format=3 uid="uid://cc23548oy2dlm"]
 
-[ext_resource type="Texture2D" uid="uid://ddxoy11ss6l5r" path="res://assets/textures/star_background.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://cqi4lcxe7wjfm" path="res://scenes/background.tscn" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cvhty6unj6v6s" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cgmjml6n8fiic" path="res://scenes/asteroid.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cwtm13ws3ca17" path="res://scenes/collection_area.tscn" id="4_lbhrr"]
 
 [node name="Game" type="Node2D" unique_id=350288215]
 
-[node name="Stars" type="Sprite2D" parent="." unique_id=84698735]
-texture_repeat = 2
-position = Vector2(640, 360)
-texture = ExtResource("1_uwrxv")
-region_enabled = true
-region_rect = Rect2(0, 0, 10000, 10000)
+[node name="Background" parent="." unique_id=1396126222 instance=ExtResource("1_lbhrr")]
 metadata/_edit_lock_ = true
 
-[node name="MapBounds" type="StaticBody2D" parent="." unique_id=1812246330]
+[node name="Gameplay" type="Node2D" parent="." unique_id=1035970452]
 
-[node name="Polygon2D" type="Polygon2D" parent="MapBounds" unique_id=408818820]
+[node name="MapBounds" type="StaticBody2D" parent="Gameplay" unique_id=1812246330]
+metadata/_edit_lock_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Gameplay/MapBounds" unique_id=408818820]
 color = Color(0, 0, 0, 0.5019608)
 polygon = PackedVector2Array(-0.30151343, -1505.1302, 396.6985, -1447.1302, 754.6985, -1300.1302, 1053.6985, -1066.1302, 1310.6985, -748.13025, 1452.6985, -390.13025, 1508.6985, -13.130245, 1457.6985, 381.86975, 1310.6985, 735.86975, 1066.6985, 1066.8698, 754.6985, 1304.8698, 386.6985, 1452.8698, 5.6984863, 1507.8698, -389.3015, 1465.8698, -757.3015, 1304.8698, -1065.3015, 1070.8698, -1308.3015, 762.86975, -1455.3015, 390.86975, -1515.3015, 9.869755, -1460.3015, -376.13025, -1304.3015, -758.13025, -1051.3015, -1075.1302, -766.3015, -1304.1302, -398.3015, -1456.1302, -0.30151343, -1505.1302, 156.69849, -4602.1304, -4312.3013, -4597.1304, -4319.3013, 5331.8696, 5608.6987, 5327.8696, 5588.6987, -4597.1304, 170.69849, -4597.1304)
+metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapBounds" unique_id=133451940]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Gameplay/MapBounds" unique_id=133451940]
 visible = false
 position = Vector2(3.3015134, 1.1302454)
 polygon = PackedVector2Array(-0.30151343, -1505.1302, 396.6985, -1447.1302, 754.6985, -1300.1302, 1053.6985, -1066.1302, 1310.6985, -748.13025, 1452.6985, -390.13025, 1508.6985, -13.130245, 1457.6985, 381.86975, 1310.6985, 735.86975, 1066.6985, 1066.8698, 754.6985, 1304.8698, 386.6985, 1452.8698, 5.6984863, 1507.8698, -389.3015, 1465.8698, -757.3015, 1304.8698, -1065.3015, 1070.8698, -1308.3015, 762.86975, -1455.3015, 390.86975, -1515.3015, 9.869755, -1460.3015, -376.13025, -1304.3015, -758.13025, -1051.3015, -1075.1302, -766.3015, -1304.1302, -398.3015, -1456.1302, -0.30151343, -1505.1302, 156.69849, -4602.1304, -4312.3013, -4597.1304, -4319.3013, 5331.8696, 5608.6987, 5327.8696, 5588.6987, -4597.1304, 170.69849, -4597.1304)
+metadata/_edit_lock_ = true
 
-[node name="CollectionArea" parent="." unique_id=880872145 instance=ExtResource("4_lbhrr")]
+[node name="CollectionArea" parent="Gameplay" unique_id=880872145 instance=ExtResource("4_lbhrr")]
+metadata/_edit_lock_ = true
 
-[node name="Asteroids" type="Node2D" parent="." unique_id=1468732009]
+[node name="Asteroids" type="Node2D" parent="Gameplay" unique_id=1468732009]
 
-[node name="Asteroid1" parent="Asteroids" unique_id=501276675 instance=ExtResource("3_lnu2h")]
+[node name="Asteroid1" parent="Gameplay/Asteroids" unique_id=501276675 instance=ExtResource("3_lnu2h")]
 position = Vector2(181, 317)
 
-[node name="Asteroid2" parent="Asteroids" unique_id=230669420 instance=ExtResource("3_lnu2h")]
+[node name="Asteroid2" parent="Gameplay/Asteroids" unique_id=230669420 instance=ExtResource("3_lnu2h")]
 position = Vector2(-356, -445)
 
-[node name="Asteroid3" parent="Asteroids" unique_id=1338319440 instance=ExtResource("3_lnu2h")]
+[node name="Asteroid3" parent="Gameplay/Asteroids" unique_id=1338319440 instance=ExtResource("3_lnu2h")]
 position = Vector2(427, -320)
 
-[node name="Asteroid4" parent="Asteroids" unique_id=376537019 instance=ExtResource("3_lnu2h")]
+[node name="Asteroid4" parent="Gameplay/Asteroids" unique_id=376537019 instance=ExtResource("3_lnu2h")]
 position = Vector2(622, 194)
 
-[node name="Asteroid5" parent="Asteroids" unique_id=1717559947 instance=ExtResource("3_lnu2h")]
+[node name="Asteroid5" parent="Gameplay/Asteroids" unique_id=1717559947 instance=ExtResource("3_lnu2h")]
 position = Vector2(-441, 427)
 
-[node name="Player" parent="." unique_id=336276440 instance=ExtResource("2_yqjtg")]
+[node name="Asteroid6" parent="Gameplay/Asteroids" unique_id=1342516860 instance=ExtResource("3_lnu2h")]
+position = Vector2(-566, 1167)
+
+[node name="Asteroid7" parent="Gameplay/Asteroids" unique_id=1467568854 instance=ExtResource("3_lnu2h")]
+position = Vector2(-56, 988)
+
+[node name="Asteroid8" parent="Gameplay/Asteroids" unique_id=2088861847 instance=ExtResource("3_lnu2h")]
+position = Vector2(371, 1213)
+
+[node name="Asteroid9" parent="Gameplay/Asteroids" unique_id=1000245455 instance=ExtResource("3_lnu2h")]
+position = Vector2(-52, 602)
+
+[node name="Asteroid10" parent="Gameplay/Asteroids" unique_id=375209552 instance=ExtResource("3_lnu2h")]
+position = Vector2(279, 758)
+
+[node name="Asteroid11" parent="Gameplay/Asteroids" unique_id=101380667 instance=ExtResource("3_lnu2h")]
+position = Vector2(688, 836)
+
+[node name="Asteroid12" parent="Gameplay/Asteroids" unique_id=1001049897 instance=ExtResource("3_lnu2h")]
+position = Vector2(1046, 496)
+
+[node name="Asteroid13" parent="Gameplay/Asteroids" unique_id=1502266648 instance=ExtResource("3_lnu2h")]
+position = Vector2(1101, -51)
+
+[node name="Asteroid14" parent="Gameplay/Asteroids" unique_id=1123894071 instance=ExtResource("3_lnu2h")]
+position = Vector2(733, -212)
+
+[node name="Asteroid15" parent="Gameplay/Asteroids" unique_id=1879241552 instance=ExtResource("3_lnu2h")]
+position = Vector2(1022, -671)
+
+[node name="Asteroid16" parent="Gameplay/Asteroids" unique_id=1247673799 instance=ExtResource("3_lnu2h")]
+position = Vector2(604, -1016)
+
+[node name="Asteroid17" parent="Gameplay/Asteroids" unique_id=689033403 instance=ExtResource("3_lnu2h")]
+position = Vector2(471, -699)
+
+[node name="Asteroid18" parent="Gameplay/Asteroids" unique_id=23066480 instance=ExtResource("3_lnu2h")]
+position = Vector2(154, -1250)
+
+[node name="Asteroid19" parent="Gameplay/Asteroids" unique_id=212813587 instance=ExtResource("3_lnu2h")]
+position = Vector2(90, -956)
+
+[node name="Asteroid20" parent="Gameplay/Asteroids" unique_id=1428859913 instance=ExtResource("3_lnu2h")]
+position = Vector2(-338, -1201)
+
+[node name="Asteroid21" parent="Gameplay/Asteroids" unique_id=750008220 instance=ExtResource("3_lnu2h")]
+position = Vector2(-728, -1015)
+
+[node name="Asteroid22" parent="Gameplay/Asteroids" unique_id=851415953 instance=ExtResource("3_lnu2h")]
+position = Vector2(-378, -877)
+
+[node name="Asteroid23" parent="Gameplay/Asteroids" unique_id=456600285 instance=ExtResource("3_lnu2h")]
+position = Vector2(-1200, -657)
+
+[node name="Asteroid24" parent="Gameplay/Asteroids" unique_id=1837832284 instance=ExtResource("3_lnu2h")]
+position = Vector2(-703, -437)
+
+[node name="Asteroid25" parent="Gameplay/Asteroids" unique_id=1349319735 instance=ExtResource("3_lnu2h")]
+position = Vector2(-1216, -315)
+
+[node name="Asteroid26" parent="Gameplay/Asteroids" unique_id=1117492643 instance=ExtResource("3_lnu2h")]
+position = Vector2(-817, 51)
+
+[node name="Asteroid27" parent="Gameplay/Asteroids" unique_id=557956671 instance=ExtResource("3_lnu2h")]
+position = Vector2(-1021, 605)
+
+[node name="Asteroid28" parent="Gameplay/Asteroids" unique_id=639172505 instance=ExtResource("3_lnu2h")]
+position = Vector2(-1347, 239)
+
+[node name="Player" parent="Gameplay" unique_id=336276440 instance=ExtResource("2_yqjtg")]
 position = Vector2(345, -82)
